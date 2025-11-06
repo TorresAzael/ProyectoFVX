@@ -23,9 +23,15 @@ public class CharacterController : MonoBehaviour
 
         playerCollider.height = playerAnimator.GetFloat("colliderHeight");
         Physics.gravity = Vector3.up * playerAnimator.GetFloat("gravity");
-        if (Input.GetKeyDown(KeyCode.F))
+
+        if (Input.GetKeyDown(KeyCode.V))
         {
             playerAnimator.SetTrigger("attack");
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            playerAnimator.SetTrigger("grab");
         }
     }
 
